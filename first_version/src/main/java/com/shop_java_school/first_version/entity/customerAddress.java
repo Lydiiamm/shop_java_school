@@ -1,31 +1,42 @@
 package com.shop_java_school.first_version.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 
+/**
+ * Class customerAddress it connects the idCustomer and idAddress
+ */
+@Entity
 public class customerAddress {
     @Column(name="idCustomer", nullable=false, unique=false)
     private int idCustomer;
     @Column(name="idAddress", nullable=false, unique=false)
     private int idAddress;
 
+    /**
+     * Constructor of the class customerAddress
+     * @param idCustomer identifier of the customer
+     * @param idAddress identifier of the address
+     */
     public customerAddress(int idCustomer, int idAddress) {
         this.idCustomer = idCustomer;
         this.idAddress = idAddress;
     }
 
+    /**
+     * Getter
+     * @return idCustomer
+     */
     public int getIdCustomer() {
         return idCustomer;
     }
 
-    public void setIdCustomer(int idCustomer) {
-        this.idCustomer = idCustomer;
-    }
-
+    /**
+     * Getter
+     * @return idAddress
+     */
     public int getIdAddress() {
         return idAddress;
     }
 
-    public void setIdAddress(int idAddress) {
-        this.idAddress = idAddress;
-    }
 }

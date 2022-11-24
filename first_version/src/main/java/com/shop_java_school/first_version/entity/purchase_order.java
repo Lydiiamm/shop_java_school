@@ -1,9 +1,15 @@
 package com.shop_java_school.first_version.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityResult;
 import javax.persistence.Id;
 import java.util.Date;
 
+/**
+ * Class that constains all the relevant information about one order
+ */
+@Entity
 public class purchase_order {
 
     @Id
@@ -21,6 +27,16 @@ public class purchase_order {
     @Column(name="orderStatus", nullable=true, unique=false)
     private int orderStatus;
 
+    /**
+     * Constructor of the class purchase_order
+     * @param idOrder identifier of the order
+     * @param idCustomer identifier of the costumer
+     * @param idAddress identifier of the address
+     * @param paymentMethod identifier of the payment method
+     * @param deliveryMethod delivery method selected
+     * @param paymentStatus identifier of the payment status
+     * @param orderStatus identifier of the order status
+     */
     public purchase_order(int idOrder, int idCustomer, int idAddress, int paymentMethod, String deliveryMethod, int paymentStatus, int orderStatus) {
         this.idOrder = idOrder;
         this.idCustomer = idCustomer;
@@ -31,59 +47,76 @@ public class purchase_order {
         this.orderStatus = orderStatus;
     }
 
+    /**
+     * Getter
+     * @return idOrder
+     */
     public int getIdOrder() {
         return idOrder;
     }
 
+    /**
+     * Setter
+     * @param idOrder
+     */
     public void setIdOrder(int idOrder) {
         this.idOrder = idOrder;
     }
 
+    /**
+     * Getter
+     * @return idCustomer
+     */
     public int getIdCustomer() {
         return idCustomer;
     }
 
-    public void setIdCustomer(int idCustomer) {
-        this.idCustomer = idCustomer;
-    }
-
+    /**
+     * Getter
+     * @return idAddress
+     */
     public int getIdAddress() {
         return idAddress;
     }
 
-    public void setIdAddress(int idAddress) {
-        this.idAddress = idAddress;
-    }
-
+    /**
+     * Getter
+     * @return paymentMethod
+     */
     public int getPaymentMethod() {
         return paymentMethod;
     }
 
-    public void setPaymentMethod(int paymentMethod) {
-        this.paymentMethod = paymentMethod;
-    }
-
+    /**
+     * Getter
+     * @return deliveryMethod
+     */
     public String getDeliveryMethod() {
         return deliveryMethod;
     }
 
+    /**
+     * Setter
+     * @param deliveryMethod
+     */
     public void setDeliveryMethod(String deliveryMethod) {
         this.deliveryMethod = deliveryMethod;
     }
 
+    /**
+     * Getter
+     * @return paymentStatus
+     */
     public int getPaymentStatus() {
         return paymentStatus;
     }
 
-    public void setPaymentStatus(int paymentStatus) {
-        this.paymentStatus = paymentStatus;
-    }
-
+    /**
+     * Getter
+     * @return orderStatus
+     */
     public int getOrderStatus() {
         return orderStatus;
     }
 
-    public void setOrderStatus(int orderStatus) {
-        this.orderStatus = orderStatus;
-    }
 }

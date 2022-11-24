@@ -1,8 +1,13 @@
 package com.shop_java_school.first_version.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
+/**
+ * Class that relates all the relevant information about the products of an order
+ */
+@Entity
 public class product_description {
 
     @Id
@@ -16,6 +21,15 @@ public class product_description {
     @Column(name="stock", nullable=false, unique=false)
     private int stock;
 
+
+    /**
+     * Constructor of the class product_description
+     * @param idProductDescription indentifier of a product with al its characteristics
+     * @param idSize identifier of the size
+     * @param idColor identifier of the color
+     * @param idProduct identifier of the product
+     * @param stock quantity on stock
+     */
     public product_description(int idProductDescription, int idSize, int idColor, int idProduct, int stock) {
         this.idProductDescription = idProductDescription;
         this.idSize = idSize;
@@ -24,42 +38,58 @@ public class product_description {
         this.stock = stock;
     }
 
+    /**
+     * Getter
+     * @return idProductDescription
+     */
     public int getIdProductDescription() {
         return idProductDescription;
     }
 
+    /**
+     * Setter
+     * @param idProductDescription
+     */
     public void setIdProductDescription(int idProductDescription) {
         this.idProductDescription = idProductDescription;
     }
 
+    /**
+     * Getter
+     * @return idSize
+     */
     public int getIdSize() {
         return idSize;
     }
 
-    public void setIdSize(int idSize) {
-        this.idSize = idSize;
-    }
-
+    /**
+     * Getter
+     * @return idColor
+     */
     public int getIdColor() {
         return idColor;
     }
 
-    public void setIdColor(int idColor) {
-        this.idColor = idColor;
-    }
-
+    /**
+     * Getter
+     * @return idProduct
+     */
     public int getIdProduct() {
         return idProduct;
     }
 
-    public void setIdProduct(int idProduct) {
-        this.idProduct = idProduct;
-    }
-
+    /**
+     * Getter
+     * @return stock
+     */
     public int getStock() {
         return stock;
     }
 
+    /**
+     * Setter
+     * @param stock
+     */
     public void setStock(int stock) {
         this.stock = stock;
     }
