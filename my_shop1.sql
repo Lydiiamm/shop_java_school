@@ -3,27 +3,27 @@ CREATE DATABASE lydias_shop;
 
 use lydias_shop;
 
+ create table country (
+	idCountry INT not null PRIMARY KEY,
+	countryName VARCHAR(50) NULL
+    
+);
 
 create table address(
 
 	idAddress INT not null primary key,
-	country INT NULL,
+	idCountry INT NULL,
 	city VARCHAR(50) NULL,
 	postalCode VARCHAR(50) NULL, 
 	streetLine1 VARCHAR(50) NULL,
     streetLine2 VARCHAR(50) null,
     home VARCHAR(50) NULL,
-    apartment VARCHAR(50) null
+    apartment VARCHAR(50) null,
+    
+    FOREIGN KEY (idCountry) REFERENCES country (idCountry)
     
 );
 
- create table country (
-	idCountry INT not null PRIMARY KEY,
-	countryName VARCHAR(50) NULL,
-	
-    FOREIGN KEY (idCountry) REFERENCES address (idAddress)
-
-);
 
 create table size (
 	idSize int not null primary key,
