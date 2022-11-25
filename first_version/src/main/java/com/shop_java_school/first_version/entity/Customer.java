@@ -1,4 +1,4 @@
-package com.shop_java_school.first_version.entity;
+package com.shop_java_school.first_version.controller.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import java.util.Date;
  * Class customer, it has all the data needed for the sign up
  */
 @Entity
-public class customer {
+public class Customer {
     @Id
     private int idCustomer;
     @Column(name="idAddress", nullable=true, unique=false)
@@ -35,7 +35,7 @@ public class customer {
      * @param email email of the customer
      * @param accountPassword password
      */
-    public customer(int idCustomer, int idAddress, String customerName, String customerSurname, Date dateofBirth, String email, String accountPassword) {
+    public Customer(int idCustomer, int idAddress, String customerName, String customerSurname, Date dateofBirth, String email, String accountPassword) {
         this.idCustomer = idCustomer;
         this.idAddress = idAddress;
         this.customerName = customerName;

@@ -1,16 +1,14 @@
-package com.shop_java_school.first_version.entity;
+package com.shop_java_school.first_version.controller.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityResult;
 import javax.persistence.Id;
-import java.util.Date;
 
 /**
  * Class that constains all the relevant information about one order
  */
 @Entity
-public class purchase_order {
+public class Purchase_order {
 
     @Id
     private int idOrder;
@@ -37,7 +35,7 @@ public class purchase_order {
      * @param paymentStatus identifier of the payment status
      * @param orderStatus identifier of the order status
      */
-    public purchase_order(int idOrder, int idCustomer, int idAddress, int paymentMethod, String deliveryMethod, int paymentStatus, int orderStatus) {
+    public Purchase_order(int idOrder, int idCustomer, int idAddress, int paymentMethod, String deliveryMethod, int paymentStatus, int orderStatus) {
         this.idOrder = idOrder;
         this.idCustomer = idCustomer;
         this.idAddress = idAddress;

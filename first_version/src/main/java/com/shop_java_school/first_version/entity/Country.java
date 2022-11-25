@@ -1,4 +1,4 @@
-package com.shop_java_school.first_version.entity;
+package com.shop_java_school.first_version.controller.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Id;
  * each one. It is in case we want to access to all the orders in one country for example.
  */
 @Entity
-public class country {
+public class Country {
 
     @Id
     private int idCountry;
@@ -21,7 +21,7 @@ public class country {
      * @param idCountry identifier of the country
      * @param countryName name of the countrys
      */
-    public country(int idCountry, String countryName) {
+    public Country(int idCountry, String countryName) {
         this.idCountry = idCountry;
         this.countryName = countryName;
     }

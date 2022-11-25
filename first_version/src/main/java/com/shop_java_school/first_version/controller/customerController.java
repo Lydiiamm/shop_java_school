@@ -1,6 +1,6 @@
 package com.shop_java_school.first_version.controller;
 
-import com.shop_java_school.first_version.entity.customer;
+import com.shop_java_school.first_version.controller.entity.Customer;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,22 +11,22 @@ public class customerController {
 
     //http://localhost:8080/api/customer
     @PostMapping
-    public customer addCustomer(){
+    public Customer addCustomer(){
         return null;
     }
 
     @PutMapping("/{customerId}") //http://localhost:8080/api/customer/10 PUT
-    public customer updateCustomer(){
+    public Customer updateCustomer(){
         return null;
     }
 
     @GetMapping //http://localhost:8080/api/customer GET
-    public List<customer> getAllCustomer(){
+    public List<Customer> getAllCustomer(){
         return null;
     }
 
     @GetMapping ("/{customerId}") //http://localhost:8080/api/customer GET
-    public customer getCustomerById(){
+    public Customer getCustomerById(){
 
         return null;
     }

@@ -1,4 +1,4 @@
-package com.shop_java_school.first_version.entity;
+package com.shop_java_school.first_version.controller.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * Class that selects the size of the product
  */
 @Entity
-public class size {
+public class Size {
 
     @Id
     private int idSize;
@@ -20,7 +20,7 @@ public class size {
      * @param idSize identifier of the size
      * @param size real size
      */
-    public size(int idSize, String size) {
+    public Size(int idSize, String size) {
         this.idSize = idSize;
         this.size = size;
     }

@@ -1,4 +1,4 @@
-package com.shop_java_school.first_version.entity;
+package com.shop_java_school.first_version.controller.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * Class that has all the information of a selected product
  */
 @Entity
-public class product {
+public class Product {
     @Id
     private int idProduct;
     @Column(name="price", nullable=false, unique=false)
@@ -28,7 +28,7 @@ public class product {
      * @param weight weight of the product
      * @param volume volume of the product
      */
-    public product(int idProduct, int price, String category, float weight, float volume) {
+    public Product(int idProduct, int price, String category, float weight, float volume) {
         this.idProduct = idProduct;
         this.price = price;
         this.category = category;

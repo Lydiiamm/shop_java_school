@@ -1,4 +1,4 @@
-package com.shop_java_school.first_version.entity;
+package com.shop_java_school.first_version.controller.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * Class to choose the clothes color, it can be null. Each color has an id.
  */
 @Entity
-public class color {
+public class Color {
 
     @Id
     private int idColor;
@@ -20,7 +20,7 @@ public class color {
      * @param idColor identifier of the color
      * @param color name of the color
      */
-    public color(int idColor, String color) {
+    public Color(int idColor, String color) {
         this.idColor = idColor;
         this.color = color;
     }

@@ -1,4 +1,4 @@
-package com.shop_java_school.first_version.entity;
+package com.shop_java_school.first_version.controller.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * Class that relates all the relevant information about the products of an order
  */
 @Entity
-public class product_description {
+public class Product_description {
 
     @Id
     private int idProductDescription;
@@ -30,7 +30,7 @@ public class product_description {
      * @param idProduct identifier of the product
      * @param stock quantity on stock
      */
-    public product_description(int idProductDescription, int idSize, int idColor, int idProduct, int stock) {
+    public Product_description(int idProductDescription, int idSize, int idColor, int idProduct, int stock) {
         this.idProductDescription = idProductDescription;
         this.idSize = idSize;
         this.idColor = idColor;

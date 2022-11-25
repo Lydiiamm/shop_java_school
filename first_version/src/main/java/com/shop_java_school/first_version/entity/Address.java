@@ -1,4 +1,4 @@
-package com.shop_java_school.first_version.entity;
+package com.shop_java_school.first_version.controller.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Id;
  * that is the primary key and all the relevant information.
  */
 @Entity
-public class address {
+public class Address {
     @Id
     private int idAddress;
     @Column(name="idCountry", nullable=true, unique=false)
@@ -38,7 +38,7 @@ public class address {
      * @param home  number on the street
      * @param apartment floor and letter
      */
-    public address(int idAddress, int country, String city, String postalCode, String streetLine1, String streetLine2, String home, String apartment) {
+    public Address(int idAddress, int country, String city, String postalCode, String streetLine1, String streetLine2, String home, String apartment) {
         this.idAddress = idAddress;
         this.idCountry = country;
         this.city = city;

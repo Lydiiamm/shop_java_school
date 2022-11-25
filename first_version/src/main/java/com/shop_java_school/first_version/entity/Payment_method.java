@@ -1,4 +1,4 @@
-package com.shop_java_school.first_version.entity;
+package com.shop_java_school.first_version.controller.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * Clas that selects the payment method
  */
 @Entity
-public class payment_method {
+public class Payment_method {
     @Id
     private int idMethod;
     @Column(name="method", length=50, nullable=true, unique=false)
@@ -20,7 +20,7 @@ public class payment_method {
      * @param method actual payment method
      */
 
-    public payment_method(int idMethod, String method) {
+    public Payment_method(int idMethod, String method) {
         this.idMethod = idMethod;
         this.method = method;
     }

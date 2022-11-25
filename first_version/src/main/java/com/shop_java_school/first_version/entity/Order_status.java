@@ -1,4 +1,4 @@
-package com.shop_java_school.first_version.entity;
+package com.shop_java_school.first_version.controller.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
  * Class that selects the status of the order
  */
 @Entity
-public class order_status {
+public class Order_status {
 
     @Id
     private int idOrderStatus;
@@ -20,7 +20,7 @@ public class order_status {
      * @param idOrderStatus identifier of the status
      * @param status_order real status
      */
-    public order_status(int idOrderStatus, String status_order) {
+    public Order_status(int idOrderStatus, String status_order) {
         this.idOrderStatus = idOrderStatus;
         this.status_order = status_order;
     }
